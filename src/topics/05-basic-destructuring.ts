@@ -61,3 +61,11 @@ console.log("Song: ", anotherSong);
 console.log("Duration: ", duration);
 
 console.log("Author: ", author);
+
+console.log("-------------------------------------------");
+
+// Desestructuración de arreglos
+
+const [, , trunks = "Not found"]: string[] = ["Goku", "Vegeta", "Trunks"];
+
+console.warn("Personaje 3:", trunks);
