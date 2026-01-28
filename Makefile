@@ -2,10 +2,11 @@
 
 start: ## Construye y levanta el contenedor
 	docker-compose up -d --build
-	@echo "App disponible en http://localhost:5173"
+	@echo '$(YELLOW)App disponible en http://localhost:5173'
 
 up: ## Levanta el contenedor
 	docker-compose up -d
+	@echo '$(YELLOW)Aplicación disponible en: http://localhost:5173'
 
 down: ## Detiene el contenedor
 	docker-compose down

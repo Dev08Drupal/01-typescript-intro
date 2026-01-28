@@ -4,7 +4,8 @@ import "./style.css";
 // import "./topics/02-object-interface";
 // import "./topics/03-funtions";
 // import "./topics/04-homework-types";
-import "./topics/05-basic-destructuring";
+// import "./topics/05-basic-destructuring";
+import "./topics/06-funtion-destructuring";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
