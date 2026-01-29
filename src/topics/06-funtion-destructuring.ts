@@ -1,17 +1,17 @@
-interface Product {
+export interface Product {
   description: string;
   price: number;
 }
 
-const phone: Product = {
-  description: "Nokia A1",
-  price: 150.0,
-};
+// const phone: Product = {
+//   description: "Nokia A1",
+//   price: 150.0,
+// };
 
-const tablet: Product = {
-  description: "iPad Air",
-  price: 250.0,
-};
+// const tablet: Product = {
+//   description: "iPad Air",
+//   price: 250.0,
+// };
 
 interface TaxCalculationOptions {
   tax: number;
@@ -23,10 +23,11 @@ interface TaxCalculationOptions {
 //   tax,
 //   products,
 // }: TaxCalculationOptions): [number, number] {
-function taxCalculation(options: TaxCalculationOptions): [number, number] {
-  
-  const {tax, products} = options;
-  
+export function taxCalculation(
+  options: TaxCalculationOptions,
+): [number, number] {
+  const { tax, products } = options;
+
   let total = 0;
   products.forEach(({ price }) => {
     total += price;
@@ -35,10 +36,10 @@ function taxCalculation(options: TaxCalculationOptions): [number, number] {
   return [total, total * tax];
 }
 
-const shoppingCart = [phone, tablet];
-const tax = 0.15;
+// const shoppingCart = [phone, tablet];
+// const tax = 0.15;
 
-const [total, taxTotal] = taxCalculation({ products: shoppingCart, tax });
+// const [total, taxTotal] = taxCalculation({ products: shoppingCart, tax });
 
-console.log("Total", total);
-console.log("Tax", taxTotal);
+// console.log("Total", total);
+// console.log("Tax", taxTotal);
